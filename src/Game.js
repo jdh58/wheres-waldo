@@ -1,4 +1,5 @@
 import Header from './Header';
+import './styles/Game.css';
 
 export default function Game(props) {
   return (

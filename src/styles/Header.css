@@ -1,0 +1,66 @@
+header.header {
+  background-color: rgb(35, 35, 35);
+  border-bottom: 1px solid rgb(53, 53, 53);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  height: 50px;
+  padding: 0 min(2%, 25px);
+}
+
+header .help {
+  justify-self: start;
+}
+
+header .help:hover {
+  cursor: pointer;
+}
+
+header .title {
+  font-size: 2.5rem;
+  justify-self: center;
+}
+
+header .userInfo {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  user-select: none;
+}
+
+.userInfo img {
+  width: 30px;
+}
+
+.userInfo .name {
+  font-size: 1.6rem;
+}
+
+.userInfo .logButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  border: 2px white solid;
+  background-color: transparent;
+  color: white;
+}
+
+.logButton > img {
+  width: 17.5px;
+}
+
+.userInfo .logButton:hover {
+  cursor: pointer;
+  border: 2px white solid;
+  background-color: white;
+  color: black;
+}
+
+.userInfo .logButton:hover > img {
+  filter: brightness(0) saturate(100%);
+}
