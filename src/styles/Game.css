@@ -15,6 +15,8 @@
 }
 
 .gameImage {
+  user-select: none;
+  position: relative;
   grid-row: 2 / 3;
   border: 1px rgb(167, 167, 167) solid;
   border-radius: 10px;
@@ -35,4 +37,119 @@
 .timer {
   grid-row: -2 / -1;
   font-size: 3.5rem;
+}
+
+.targetBox {
+  position: absolute;
+  z-index: 2;
+  opacity: 50%;
+  background-color: transparent;
+}
+
+.spongeBob {
+  width: 7.5%;
+  height: 10%;
+  bottom: 0;
+  left: 40.5%;
+}
+
+.mario {
+  width: 5.5%;
+  height: 19%;
+  bottom: 15%;
+  left: 0;
+}
+
+.spiderMan {
+  width: 9.5%;
+  height: 19%;
+  bottom: 8%;
+  left: 31%;
+}
+
+.ironMan {
+  width: 8%;
+  height: 21%;
+  bottom: 0%;
+  left: 75%;
+}
+
+.sonic {
+  width: 5%;
+  height: 8%;
+  bottom: 38%;
+  left: 88%;
+}
+
+.homerSimpson {
+  width: 5%;
+  height: 13%;
+  bottom: 25%;
+  left: 89%;
+}
+
+.bartSimpson {
+  width: 6%;
+  height: 17%;
+  bottom: 70%;
+  left: 4%;
+}
+
+.peterGriffin {
+  width: 6%;
+  height: 13%;
+  bottom: 52.5%;
+  left: 27%;
+}
+
+.taz {
+  width: 5%;
+  height: 11%;
+  bottom: 0;
+  left: 64.5%;
+}
+
+.yoda {
+  width: 5.5%;
+  height: 7%;
+  bottom: 42%;
+  left: 66%;
+}
+
+.tagPopUp {
+  background-color: #000000b1;
+  position: fixed;
+  z-index: 1;
+  display: grid;
+  padding: 5px;
+  grid-template-rows: repeat(5, 20px);
+  grid-template-columns: repeat(2, 100px);
+  align-items: center;
+  border-radius: 10px;
+}
+
+.tagPopUp > p {
+  display: flex;
+  font-size: 1.2rem;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.tagPopUp > p:hover {
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.tagPopUp > p.disabled {
+  color: #ffffffb3;
+}
+
+.tagPopUp > p.disabled:hover {
+  cursor: default;
+  font-size: 1.25rem;
 }

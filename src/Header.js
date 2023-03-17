@@ -58,7 +58,9 @@ export default function Header() {
             alt=""
             className="profilePic"
           />
-          <p className="name">Barry McCockiner</p>
+          <p className="name">
+            {getAuth(app).currentUser.displayName || 'Username'}
+          </p>
           <button className="logButton out" onClick={handleSignOut}>
             <p>Log Out</p> <img src={LogOut} alt="" />
           </button>
