@@ -94,10 +94,6 @@ export default function Game(props) {
       return;
     }
 
-    // Otherwise, render the popup with a clean border
-    setRenderPopUp(true);
-    document.querySelector('.tagPopUp').style.border = 'none';
-
     // Set the position for the pop-up
     setXVal(e.clientX + 5);
     setYVal(e.clientY - 50);
@@ -108,6 +104,10 @@ export default function Game(props) {
     } else {
       setSelectedChar(e.target.classList[1]);
     }
+
+    // Render the popup with a clean border
+    setRenderPopUp(true);
+    document.querySelector('.tagPopUp').style.border = 'none';
   };
 
   return (

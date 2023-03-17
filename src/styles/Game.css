@@ -2,11 +2,28 @@
   height: calc(100vh - 60px);
   width: 100%;
   background-color: rgb(35, 35, 35);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-content: space-evenly;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 4fr 1fr;
+}
+
+.play {
+  border: 2px white solid;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  width: 175px;
+  height: 5rem;
+  font-size: 2.5rem;
+}
+
+.play:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
 }
 
 .correctIndicator {
