@@ -3,6 +3,7 @@ import React from 'react';
 import Leaderboard from './Leaderboard';
 import SignIn from './SignIn';
 import Game from './Game';
+import { useState } from 'react';
 
 function App() {
   return (

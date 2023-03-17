@@ -4,9 +4,10 @@ import GameImage from './assets/zyro-image.png';
 import TargetBoxes from './TargetBoxes';
 import PopUp from './PopUp';
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Game(props) {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [gameStatus, setGameStatus] = useState('before');
   const [renderPopUp, setRenderPopUp] = useState(false);
   const [xVal, setXVal] = useState(null);
   const [yVal, setYVal] = useState(null);
@@ -18,7 +19,7 @@ export default function Game(props) {
   const [timerInterval, setTimerInterval] = useState(null);
 
   const startGame = () => {
-    setIsPlaying(true);
+    setGameStatus('during');
 
     // Start timer
     setTimerInterval(
@@ -57,6 +58,7 @@ export default function Game(props) {
   useEffect(() => {
     if (correct >= 10) {
       clearInterval(timerInterval);
+      setGameStatus('after');
     }
   }, [correct]);
 
@@ -110,17 +112,31 @@ export default function Game(props) {
     document.querySelector('.tagPopUp').style.border = 'none';
   };
 
+  const submitScore = () => {
+    // props.sendInfo(time, formattedTime, )
+  };
+
   return (
     <>
       <Header />
       <div className="gamePage">
-        {isPlaying ? (
-          <h2 className="correctIndicator">{correct}/10</h2>
-        ) : (
+        {gameStatus === 'before' ? (
           <button className="play" onClick={startGame}>
             PLAY
           </button>
-        )}
+        ) : null}
+        {gameStatus === 'during' ? (
+          <h2 className="correctIndicator">{correct}/10</h2>
+        ) : null}
+        {gameStatus === 'after' ? (
+          <>
+            <h2 className="banner">You Win!</h2>
+            <Link to="/leaderboard" onClick={submitScore}>
+              SUBMIT
+            </Link>
+          </>
+        ) : null}
+
         <div className="gameImage" onClick={handleImageClick}>
           <TargetBoxes />
           {renderPopUp ? (
