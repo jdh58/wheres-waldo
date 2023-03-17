@@ -1,12 +1,15 @@
 header.header {
-  background-color: rgb(35, 35, 35);
+  position: relative;
+  z-index: 2;
+  background-color: rgb(30, 30, 30);
   border-bottom: 1px solid rgb(53, 53, 53);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   align-items: center;
-  height: 50px;
+  height: 60px;
   padding: 0 min(2%, 25px);
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.499);
 }
 
 header .help {
@@ -18,7 +21,7 @@ header .help:hover {
 }
 
 header .logo {
-  width: 400px;
+  width: 350px;
   justify-self: center;
 }
 
@@ -31,36 +34,49 @@ header .userInfo {
 }
 
 .userInfo img {
-  width: 30px;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .userInfo .name {
   font-size: 1.6rem;
 }
 
-.userInfo .logButton {
+.logButton {
   display: flex;
   align-items: center;
   gap: 5px;
-  height: 3rem;
+  height: 4rem;
   border: none;
   border-radius: 5px;
   border: 2px white solid;
   background-color: transparent;
   color: white;
+  font-size: 1.5rem;
 }
 
 .logButton > img {
   width: 17.5px;
 }
 
-.userInfo .logButton:hover {
+.logButton:hover {
   cursor: pointer;
   border: 2px white solid;
   background-color: white;
   color: black;
 }
 
-.userInfo .logButton:hover > img {
+.logButton.in {
+  display: flex;
+  justify-content: center;
+  justify-self: end;
+  width: 100px;
+}
+
+.logButton.in > img {
+  width: 22px;
+}
+
+.logButton:hover > img {
   filter: brightness(0) saturate(100%);
 }
