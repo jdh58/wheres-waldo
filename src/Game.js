@@ -31,8 +31,8 @@ export default function Game(props) {
 
   useEffect(() => {
     let tinySeconds = time % 100;
-    let seconds = Math.floor(time / 100);
-    let minutes = Math.floor(seconds / 60);
+    let seconds = Math.floor(time / 100) % 60;
+    let minutes = Math.floor(Math.floor(time / 100) / 60);
 
     if (tinySeconds < 10 && tinySeconds > 0) {
       tinySeconds = `0${tinySeconds}`;
@@ -112,10 +112,6 @@ export default function Game(props) {
     document.querySelector('.tagPopUp').style.border = 'none';
   };
 
-  const submitScore = () => {
-    // props.sendInfo(time, formattedTime, )
-  };
-
   return (
     <>
       <Header />
@@ -131,7 +127,10 @@ export default function Game(props) {
         {gameStatus === 'after' ? (
           <>
             <h2 className="banner">You Win!</h2>
-            <Link to="/leaderboard" onClick={submitScore}>
+            <Link
+              to="/leaderboard"
+              onClick={() => props.sendTime(time, formattedTime)}
+            >
               SUBMIT
             </Link>
           </>
