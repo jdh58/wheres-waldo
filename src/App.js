@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import React from 'react';
 import Leaderboard from './Leaderboard';
 import SignIn from './SignIn';
@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Game sendTime={sendTime} />} />
         <Route path="/signin" element={<SignIn />} />
@@ -37,7 +37,7 @@ function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
