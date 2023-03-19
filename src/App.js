@@ -23,8 +23,8 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Game sendTime={sendTime} />} />
-        <Route path="/signin" element={<SignIn />} />
+        <Route path="/" element={<SignIn />} />
+        <Route path="/game" element={<Game sendTime={sendTime} />} />
         <Route
           path="/leaderboard"
           element={

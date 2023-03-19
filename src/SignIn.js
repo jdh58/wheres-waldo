@@ -1,19 +1,27 @@
-import {} from 'firebase/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './styles/SignIn.css';
 import Logo from './assets/waldoLogo.svg';
 import {
   getAuth,
-  onAuthStateChanged,
   GoogleAuthProvider,
+  onAuthStateChanged,
   signInWithPopup,
-  signOut,
 } from 'firebase/auth';
 import { app } from './firebase-config';
+import { useEffect } from 'react';
 
 export default function SignIn(props) {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    onAuthStateChanged(getAuth(app), () => {
+      if (!!getAuth(app).currentUser) {
+        navigate('/game');
+      }
+    });
+  });
+
   const handleSignIn = async () => {
-    console.log('fdsfs');
     var provider = new GoogleAuthProvider();
     await signInWithPopup(getAuth(app), provider);
   };
@@ -30,7 +38,7 @@ export default function SignIn(props) {
           />
           Sign in with Google
         </button>
-        <Link to="/" className="skipSignIn">
+        <Link to="/game" className="skipSignIn">
           Continue Anonymously
         </Link>
       </div>

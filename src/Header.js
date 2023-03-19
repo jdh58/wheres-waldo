@@ -52,7 +52,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <Link to="/">
+      <Link to="/game">
         <img
           src={Logo}
           alt=""

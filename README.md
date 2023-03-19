@@ -8,6 +8,6 @@ To-Do:
 - Handle the timer on the backend so it can't be cheated
 - Make the help icon actually pop up rules
 - Style the tag pop-up to be more visually appealing
-- Make the site more reactive to smaller windows (e.g. tag popup doesn't go offscreen, header re-sizes)
+- Make the site more responsive to window changes (e.g. tag popup doesn't go offscreen, header re-sizes)
 - Add more images to choose from with unique leaderboards
 - Have a light mode utiliziing React context
