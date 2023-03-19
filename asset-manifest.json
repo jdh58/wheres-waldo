@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wheres-waldo/static/css/main.e30c2861.css",
-    "main.js": "/wheres-waldo/static/js/main.6dcbfbf6.js",
+    "main.js": "/wheres-waldo/static/js/main.1d733b2b.js",
     "static/media/zyro-image.png": "/wheres-waldo/static/media/zyro-image.2e80d5f8c1b08aa0e7de.png",
     "static/media/textLogo.png": "/wheres-waldo/static/media/textLogo.c8a318d491a8e5b46683.png",
     "static/media/Roboto-Medium.ttf": "/wheres-waldo/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
@@ -18,10 +18,10 @@
     "static/media/user.svg": "/wheres-waldo/static/media/user.c6bf2b0e59f396191c30456fc8cccb74.svg",
     "static/media/leaderboard.svg": "/wheres-waldo/static/media/leaderboard.83f04f1b1b20d383e6bd66a393bd8c24.svg",
     "main.e30c2861.css.map": "/wheres-waldo/static/css/main.e30c2861.css.map",
-    "main.6dcbfbf6.js.map": "/wheres-waldo/static/js/main.6dcbfbf6.js.map"
+    "main.1d733b2b.js.map": "/wheres-waldo/static/js/main.1d733b2b.js.map"
   },
   "entrypoints": [
     "static/css/main.e30c2861.css",
-    "static/js/main.6dcbfbf6.js"
+    "static/js/main.1d733b2b.js"
   ]
 }
