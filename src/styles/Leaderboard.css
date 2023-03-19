@@ -2,16 +2,19 @@
   height: calc(100vh - 60px);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.5fr 2fr;
+  grid-template-rows: 115px 1fr;
   align-items: center;
   justify-items: center;
   width: 100vw;
   background-color: rgb(35, 35, 35);
   box-shadow: inset 0 0 75px -25px black;
+  row-gap: 25px;
 }
 
 .leaderboardPage .title {
   font-size: 3rem;
+  align-self: end;
+  font-weight: 400;
 }
 
 .formContainer {
@@ -93,4 +96,40 @@ div.form {
   100% {
     opacity: 1;
   }
+}
+
+.playerScores {
+  align-self: start;
+  height: calc(75px * 7);
+  overflow: scroll;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: 50px 100px 150px 150px;
+  grid-auto-rows: 75px;
+  justify-items: center;
+  align-items: center;
+}
+
+.scoreRank {
+  font-size: 2rem;
+  font-weight: 350;
+}
+
+.scoreImg {
+  width: 50px;
+  border-radius: 100%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.596);
+  justify-self: center;
+}
+
+.scoreName {
+  font-size: 1.8rem;
+  font-weight: 350;
+}
+
+.scoreTime {
+  font-size: 1.6rem;
+  font-weight: 300;
 }

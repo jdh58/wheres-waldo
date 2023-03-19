@@ -12,17 +12,38 @@ header.header {
   box-shadow: 0 0px 6px rgba(0, 0, 0, 0.499);
 }
 
-header .help {
+header .icons {
+  display: flex;
+  align-items: center;
+}
+
+header .leaderboardIcon {
+  margin-left: 24px;
+}
+
+header .leaderboardIcon > img {
+  filter: invert(100%); /* Turns it white */
+  width: 30px;
+}
+
+header .help,
+.leaderboardIcon {
   justify-self: start;
 }
 
-header .help:hover {
+header .help:hover,
+.leaderboardIcon {
   cursor: pointer;
 }
 
 header .logo {
   width: 350px;
   justify-self: center;
+  user-select: none;
+}
+
+header .logo:hover {
+  cursor: pointer;
 }
 
 header .userInfo {

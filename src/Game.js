@@ -3,7 +3,7 @@ import './styles/Game.css';
 import GameImage from './assets/zyro-image.png';
 import TargetBoxes from './TargetBoxes';
 import PopUp from './PopUp';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Game(props) {
@@ -126,7 +126,7 @@ export default function Game(props) {
         ) : null}
         {gameStatus === 'after' ? (
           <>
-            <h2 className="banner">You Win!</h2>
+            <h2 className="banner">Completed!</h2>
             <Link
               to="/leaderboard"
               onClick={() => props.sendTime(time, formattedTime)}

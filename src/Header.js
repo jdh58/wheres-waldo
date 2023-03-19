@@ -13,6 +13,8 @@ import {
 } from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import { app } from './firebase-config';
+import { Link } from 'react-router-dom';
+import LeaderboardIcon from './assets/leaderboard.svg';
 
 export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -41,15 +43,23 @@ export default function Header() {
 
   return (
     <header className="header">
-      <div className="help">
-        <img src={Help} alt="" />
+      <div className="icons">
+        <div className="help">
+          <img src={Help} alt="" />
+        </div>
+        <Link to="/leaderboard" className="leaderboardIcon">
+          <img src={LeaderboardIcon} alt="" />
+        </Link>
       </div>
-      <img
-        src={Logo}
-        alt=""
-        className="logo"
-        onClick={() => console.log(getAuth(app).currentUser)}
-      />
+
+      <Link to="/">
+        <img
+          src={Logo}
+          alt=""
+          className="logo"
+          onClick={() => console.log(getAuth(app).currentUser)}
+        />
+      </Link>
       {isLoggedIn ? (
         <div className="userInfo">
           <img
