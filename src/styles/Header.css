@@ -36,10 +36,13 @@ header .help:hover,
   cursor: pointer;
 }
 
-header .logo {
-  width: 350px;
+header a {
   justify-self: center;
   user-select: none;
+}
+
+header .logo {
+  width: 350px;
 }
 
 header .logo:hover {
